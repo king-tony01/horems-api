@@ -13,9 +13,9 @@ export const getOverview = async (req, res) => {
     return res.status(200).json({
       success: true,
       data: {
-        patients: patients.length,
-        staffs: staff.length,
-        resources: resources.length,
+        patients: patients.length ?? 0,
+        staffs: staff.length ?? 0,
+        resources: resources.length ?? 0,
       },
     });
   } catch (error) {
