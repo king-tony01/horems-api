@@ -8,6 +8,7 @@ import patientRoutes from "./routes/patients.route.js";
 import staffRoutes from "./routes/staff.route.js";
 import resourceRoutes from "./routes/resource.route.js";
 import authRoutes from "./routes/auth.route.js";
+import overviewRoutes from "./routes/overview.route.js";
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use("/api/patients", patientRoutes);
 app.use("/api/staff", staffRoutes);
 app.use("/api/resources", resourceRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/overview", overviewRoutes);
 
 // Default route
 app.get("/", (req, res) => {
